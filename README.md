@@ -1,74 +1,69 @@
-# free-for.dev
+# مجاني للمطورين 
 
-Developers and Open Source authors now have a massive amount of services offering free tiers, but it can be hard to find them all to make informed decisions.
+يمتلك المطورون ومؤلفو المصادر المفتوحة الآن قدرًا هائلاً من الخدمات التي تقدم مستويات مجانية ، ولكن قد يكون من الصعب العثور عليهم جميعًا لاتخاذ قرارات مستنيرة.
 
-This is a list of software (SaaS, PaaS, IaaS, etc.) and other offerings that have free tiers for developers.
+هذه قائمة بالبرامج (SaaS و PaaS و IaaS وما إلى ذلك) والعروض الأخرى التي تحتوي على مستويات مجانية للمطورين.
 
-The scope of this particular list is limited to things that infrastructure developers (System Administrator, DevOps Practitioners, etc.) are likely to find useful. We love all the free services out there, but it would be good to keep it on topic. It's a bit of a grey line at times so this is a bit opinionated; do not be offended if I do not accept your contribution.
+يقتصر نطاق هذه القائمة المعينة على الأشياء التي من المحتمل أن يجدها مطورو البنية التحتية (مسؤول النظام وممارسو DevOps وما إلى ذلك) مفيدة. نحن نحب جميع الخدمات المجانية المتوفرة ، ولكن سيكون من الجيد الاحتفاظ بها في الموضوع.
 
-This list is the result of Pull Requests, reviews, ideas and work done by 1100+ people. You too can help by sending [Pull Requests](https://github.com/ripienaar/free-for-dev) to add more services or by remove ones whose offerings have changed or been retired.
 
-[![Track Awesome List](https://www.trackawesomelist.com/badge.svg)](https://www.trackawesomelist.com/ripienaar/free-for-dev)
-
-*NOTE:* This list is only for as-a-Service offerings, not for self-hosted software. For a service to be eligible it has to offer a free tier and not just a free trial. If the free tier is time-bucketed it has to be for at least a year. We also consider the free tier from a security perspective, so SSO is fine but I will not accept services that restrict TLS to paid-only tiers.
-
-Table of Contents
+جدول المحتويات
 =================
 
-   * [Major Cloud Providers' Always-Free Limits](#major-cloud-providers)
-   * [Cloud management solutions](#cloud-management-solutions)
-   * [Analytics, Events and Statistics](#analytics-events-and-statistics)
-   * [APIs, Data and ML](#apis-data-and-ml)
+   * [مقدمي خدمات السحابة الرئيسيين](#major-cloud-providers)
+   * [حلول إدارة السحابة](#cloud-management-solutions)
+   * [التحليلات والأحداث والإحصاءات](#analytics-events-and-statistics)
+   * [واجهات برمجة التطبيقات والبيانات والتعلم الآلي](#apis-data-and-ml)
    * [Artifact Repos](#artifact-repos)
    * [BaaS](#baas)
-   * [CDN and Protection](#cdn-and-protection)
+   * [CDN والحماية](#cdn-and-protection)
    * [CI and CD](#ci-and-cd)
    * [CMS](#cms)
-   * [Code Quality](#code-quality)
-   * [Code Search and Browsing](#code-search-and-browsing)
-   * [Crash and Exception Handling](#crash-and-exception-handling)
-   * [Data Visualization on Maps](#data-visualization-on-maps)
+   * [جودة الكود](#code-quality)
+   * [البحث عن التعليمات البرمجية والتصفح](#code-search-and-browsing)
+   * [التعامل مع الأعطال والاستثناءات](#crash-and-exception-handling)
+   * [تصور البيانات على الخرائط](#data-visualization-on-maps)
    * [DBaaS](#dbaas)
-   * [Design and UI](#design-and-ui)
-   * [Design Inspiration](#design-inspiration)
-   * [Dev Blogging Sites](#dev-blogging-sites)
+   * [التصميم وواجهة المستخدم](#design-and-ui)
+   * [إلهام التصميم](#design-inspiration)
+   * [مدونات حول التطوير](#dev-blogging-sites)
    * [DNS](#dns)
-   * [Docker Related](#docker-related)
-   * [Domain](#domain)
-   * [Email](#email)
-   * [Font](#font)
-   * [Forms](#forms)
+   * [ادوات دوكر](#docker-related)
+   * [النطاقات](#domain)
+   * [البريد الإلكتروني](#email)
+   * [الخطوط](#font)
+   * [المنتديات](#forms)
    * [IaaS](#iaas)
-   * [IDE and Code Editing](#ide-and-code-editing)
-   * [International Mobile Number Verification API and SDK](#international-mobile-number-verification-api-and-sdk)
-   * [Issue Tracking and Project Management](#issue-tracking-and-project-management)
-   * [Log Management](#log-management)
-   * [Management Systems](#management-system)
-   * [Messaging and Streaming](#messaging-and-streaming)
-   * [Miscellaneous](#miscellaneous)
-   * [Monitoring](#monitoring)
+   * [محررات الشيفرة وبيئات التطوير المدمجة](#ide-and-code-editing)
+   * [API and SDK للتحقق من رقم الهاتف ](#international-mobile-number-verification-api-and-sdk)
+   * [تتبع المشكلات وإدارة المشاريع](#issue-tracking-and-project-management)
+   * [إدارة السجل](#log-management)
+   * [أنظمة الإدارة](#management-system)
+   * [المراسلة والبث](#messaging-and-streaming)
+   * [متفرقات](#miscellaneous)
+   * [مراقبة الأنظمة](#monitoring)
    * [PaaS](#paas)
-   * [Package Build System](#package-build-system)
-   * [Payment and Billing Integration](#payment-and-billing-integration)
-   * [Privacy Management](#privacy-management)
-   * [Screenshot APIs](#screenshot-apis)
-   * [Flutter Related and Building IOS Apps without Mac](#flutter-related-and-building-ios-apps-without-mac)
-   * [Search](#search)
-   * [Security and PKI](#security-and-pki)
-   * [Source Code Repos](#source-code-repos)
-   * [Storage and Media Processing](#storage-and-media-processing)
+   * [نظام بناء الحزمة](#package-build-system)
+   * [تكامل الدفع والفواتير](#payment-and-billing-integration)
+   * [إدارة الخصوصية](#privacy-management)
+   * [واجهات برمجة تطبيقات لقطة الشاشة](#screenshot-apis)
+   * [Flutter Related وبناء تطبيقات IOS بدون ماك](#flutter-related-and-building-ios-apps-without-mac)
+   * [بحث](#search)
+   * [الأمن والبنية التحتية للمفاتيح العمومية](#security-and-pki)
+   * [مستودعات شيفرة المصدر](#source-code-repos)
+   * [التخزين ومعالجة الوسائط](#storage-and-media-processing)
    * [Tunneling, WebRTC, Web Socket Servers and Other Routers](#tunneling-webrtc-web-socket-servers-and-other-routers)
-   * [Testing](#testing)
-   * [Tools for Teams and Collaboration](#tools-for-teams-and-collaboration)
-   * [Translation Management](#translation-management)
-   * [Vagrant Related](#vagrant-related)
-   * [Visitor Session Recording](#visitor-session-recording)
-   * [Web Hosting](#web-hosting)
-   * [Commenting Platforms](#commenting-platforms)
-   * [Browser based hardware emulation](#browser-based-hardware-emulation-written-in-javascript)
-   * [Remote Desktop Tools](#remote-desktop-tools)
-   * [Game Development](#game-development)
-   * [Other Free Resources](#other-free-resources)
+   * [اختبارات](#testing)
+   * [أدوات للفرق والتعاون](#tools-for-teams-and-collaboration)
+   * [إدارة الترجمة](#translation-management)
+   * [متعلقات فايجرنت](#vagrant-related)
+   * [تسجيل جلسة الزائر](#visitor-session-recording)
+   * [استضافة الويب](#web-hosting)
+   * [منصات التعليق](#commenting-platforms)
+   * [محاكاة الأجهزة من خلال المتصفح](#browser-based-hardware-emulation-written-in-javascript)
+   * [ادوات ادارة سطح المكتب عن بعد](#remote-desktop-tools)
+   * [تطوير الألعاب](#game-development)
+   * [مصادر مجانية أخرى](#other-free-resources)
 
 ## Major Cloud Providers
 
